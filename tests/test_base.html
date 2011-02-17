@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Test Base</title>
+    <style>
+        
+    </style>
+    <script src="../third-party/require.js"></script>
+    <script>
+		require({
+            baseUrl: "../third-party",
+			packages: [
+				{
+					name: "has",
+					lib: "detect",
+					main: "has"
+				},
+				{
+					name: "uber",
+					main: "uber"
+                },
+                {
+                    name: "compose",
+                    main: "lib/compose"
+                },
+                {
+                    name: "widgets",
+                    location: ".."
+                }
+			]
+		});
+
+        require(["widgets/Base", "widgets/Button"], function(Base, Button){
+			var b = new Button({
+				label: "This is a button",
+				onClick: function(evt){
+					console.log("You clicked me", evt, this.label);
+				}
+			});
+			document.body.appendChild(b.node);
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
