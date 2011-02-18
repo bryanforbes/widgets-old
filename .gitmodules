@@ -7,3 +7,9 @@
 [submodule "third-party/compose"]
 	path = third-party/compose
 	url = git://github.com/kriszyp/compose.git
+[submodule "third-party/cssx"]
+	path = third-party/cssx
+	url = git://github.com/unscriptable/cssx.git
+[submodule "third-party/requirejs"]
+	path = third-party/requirejs
+	url = git://github.com/jrburke/requirejs.git
