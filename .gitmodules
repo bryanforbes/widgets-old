@@ -1,9 +1,6 @@
 [submodule "third-party/has"]
 	path = third-party/has
 	url = git://github.com/kriszyp/has.js.git
-[submodule "third-party/uber"]
-	path = third-party/uber
-	url = git@github.com:bryanforbes/uber.js.git
 [submodule "third-party/compose"]
 	path = third-party/compose
 	url = git://github.com/kriszyp/compose.git
@@ -13,3 +10,6 @@
 [submodule "third-party/requirejs"]
 	path = third-party/requirejs
 	url = git://github.com/jrburke/requirejs.git
+[submodule "third-party/uber"]
+	path = third-party/uber
+	url = git://github.com/phiggins42/uber.js.git
