@@ -8,12 +8,13 @@
 	<script src="config.js"></script>
 
 	<script>
+		var b;
 		require(["widgets/Button"], function(Button){
-			var b = new Button({
-				label: "This is a button",
-				onClick: function(evt){
-					console.log("You clicked me", evt, this);
-				}
+			b = new Button({
+				label: "This is a button"
+			});
+			b.on("click", function(evt){
+				console.log("You clicked me", evt, this);
 			});
 			document.body.appendChild(b.node);
 		});
