@@ -1,4 +1,4 @@
-require({
+var require = {
 	baseUrl: "../third-party",
 	paths: {
 		require: "requirejs/require",
@@ -10,4 +10,4 @@ require({
 		{ name: "compose", main: "lib/compose" },
 		{ name: "widgets", location: ".." }
 	]
-});
+};

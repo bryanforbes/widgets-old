@@ -4,19 +4,22 @@
 	<meta charset="utf-8">
 	<title>Test Base</title>
 
-	<script src="../third-party/requirejs/require.js"></script>
 	<script src="config.js"></script>
+	<script src="../third-party/requirejs/require.js"></script>
 
 	<script>
 		var b;
-		require(["widgets/Button"], function(Button){
+		require(["widgets/Button", "uber/dom-ready"], function(Button, ready){
 			b = new Button({
 				label: "This is a button"
 			});
 			b.on("click", function(evt){
 				console.log("You clicked me", evt, this);
 			});
-			document.body.appendChild(b.node);
+
+			ready.then(function(){
+				document.body.appendChild(b.node);
+			});
 		});
 	</script>
 </head>
